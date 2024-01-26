@@ -1,14 +1,10 @@
 import mysql.connector
-def hhh(icaokoodi):
-    sql = f'SELECT airport.ident FROM airport'
+def search_airport(ident):
+    sql = 'SELECT name, municipality FROM airport WHERE ident = %s'
     kursori = yhteys.cursor()
-    kursori.execute(sql)
-    tulos = kursori.fetchall()
-    if kursori.rowcount > 0:
-        for rivi in tulos:
-            print(f' Olen  {rivi[1]}')
-
-
+    kursori.execute(sql, (ident,))
+    tulos = kursori.fetchone()
+    return tulos
 
 yhteys = mysql.connector.connect(
     host="localhost",
@@ -16,7 +12,12 @@ yhteys = mysql.connector.connect(
     database="flight_game",
     user="root",
     password="root",
-autocommit = True)
+    autocommit=True)
 
-icaokoodi = input('Korjoita koodi : ')
-hhh(icaokoodi)
+ident = input('Korjoita ICAO-koodi : ')         # example 0FL1 ,  00A
+airport_data = search_airport(ident)
+if airport_data:
+    name, municipality = airport_data
+    print(f"Lentokenttä: {name}\nSijaintikunta: {municipality}")
+else:
+    print("Lentokenttätietoja ei löytynyt annetulla ICAO-koodilla.")
