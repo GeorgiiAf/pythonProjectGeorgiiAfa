@@ -4,7 +4,8 @@ while True:
     if syöte_numero == '':
         break
     if syöte_numero.lstrip('-').replace('.','',1).isdigit():
-        # Muutetaan syöte luvuksi ja lisätään listaan
+        # Tarkistus onko syöte luku .isdigit() ,
+          # Muutetaan syöte luvuksi ja lisätään listaan
         luku = float(syöte_numero)
         numerot.append(luku)
     else:
