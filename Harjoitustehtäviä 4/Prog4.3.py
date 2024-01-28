@@ -1,14 +1,12 @@
-numerot = [] # kaikki numerot ovat tässä
+numerot = []  # kaikki numerot ovat tässä
 while True:
-    syöte_numero = input("Syötä luku (tyhjä rivi lopettaa): ")
-    if syöte_numero == '':
+    syote_numero = input("Syötä luku (tyhjä rivi lopettaa): ")
+    if syote_numero == '':
         break
-    if syöte_numero.lstrip('-').replace('.','',1).isdigit():
-        # Tarkistus onko syöte luku .isdigit() ,
-          # Muutetaan syöte luvuksi ja lisätään listaan
-        luku = float(syöte_numero)
+    try:    # me tarvitaan vain luvut
+        luku = float(syote_numero)
         numerot.append(luku)
-    else:
+    except ValueError:
         print("Virheellinen syöte, syötä luku.")
 if numerot:
     pienin = min(numerot)
