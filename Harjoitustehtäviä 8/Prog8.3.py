@@ -18,7 +18,7 @@ yhteys = mysql.connector.connect(
     password="root",
     autocommit=True)
 
-ident1 = input('Kirjoita ensimmäisen lentokentän ICAO-koodi: ')
+ident1 = input('Kirjoita ensimmäisen lentokentän ICAO-koodi: ')    # for example 0FL1 ,  00A
 airport_data1 = search_airport(ident1)
 if airport_data1:
     name, latitude, longitude = airport_data1
@@ -31,7 +31,7 @@ if airport_data1:
         paikka2 = (latitude, longitude)
 
         etäisyys = geodesic(paikka1, paikka2).kilometers  # etäisyys kilometreinä
-        print(f"Etäisyys paikan 1 ja paikan 2 välillä: {etaisyys} kilometriä")
+        print(f"Etäisyys paikan 1 ja paikan 2 välillä: {etäisyys} kilometriä")
     else:
         print(f"Lentokenttää {ident2} ei löydy tietokannasta.")
 else:
