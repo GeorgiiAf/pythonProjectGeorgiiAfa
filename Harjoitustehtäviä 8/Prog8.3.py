@@ -1,14 +1,12 @@
 import mysql.connector
 from geopy.distance import geodesic
 
-
 def search_airport(ident):
     sql = 'SELECT name,latitude_deg,longitude_deg FROM airport WHERE ident = %s'
     kursori = yhteys.cursor()
     kursori.execute(sql, (ident,))
     tulos = kursori.fetchone()
     return tulos
-
 
 yhteys = mysql.connector.connect(
     host="localhost",
