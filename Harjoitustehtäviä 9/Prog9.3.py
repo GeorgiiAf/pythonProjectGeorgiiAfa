@@ -26,7 +26,6 @@ print("Auton nopeus:", uusi_auto.tämänhetkinen_nopeus, "km/h")
 # print("Auton nopeus:", uusi_auto.tämänhetkinen_nopeus, "km/h")
 
 uusi_auto.kulje(1.5)
-print(f'auto on kuljennut {uusi_auto.kulje()}')
 
 
 print(f"Uuden auton rekisteritunnus : {uusi_auto.rekisteritunnus} huippunopeus km/h : {uusi_auto.huippunopeus} km/h"
