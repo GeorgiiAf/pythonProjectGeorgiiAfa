@@ -29,8 +29,8 @@ for auto_obj in autot:  # auto_obj , koska luokan nimi on auto tehdään auto_ob
     if auto_obj.kuljettu_matka >= 10000:
         break
 print("\nLopulliset tulokset:\n")
-print("{:<15} {:<15} {:<15} {:<20}".format("Rekisteri", "Nopeus (km/h)", "Kuljettu matka (km)", "Huippunopeus (km/h) "))
+print("{:<15} {:<15} {:<20} {:<20}".format("Rekisteri", "Nopeus (km/h)", "Kuljettu matka (km)", "Huippunopeus (km/h) "))
 print("-" * 70)
 
 for auto_obj in autot:
-    print("{:<15} {:<15} {:<15} {:<20}".format(auto_obj.rekisteritunnus, auto_obj.tämänhetkinen_nopeus, auto_obj.kuljettu_matka , auto_obj.huippunopeus))
+    print("{:<15} {:<15} {:<20} {:<20}".format(auto_obj.rekisteritunnus, auto_obj.tämänhetkinen_nopeus, auto_obj.kuljettu_matka , auto_obj.huippunopeus))
