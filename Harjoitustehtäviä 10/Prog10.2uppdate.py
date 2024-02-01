@@ -1,4 +1,4 @@
-class Hissi:
+class hissi:
     def __init__(self, alin_kerros, ylin_kerros):
         self.nykyinen_kerros = alin_kerros
         self.kerrokset = list(range(alin_kerros, ylin_kerros + 1))
@@ -23,10 +23,9 @@ class Hissi:
     def ilmoita_kerros(self):
         print(f"Hissi on kerroksessa {self.nykyinen_kerros}")
 
-
 class Talo:
     def __init__(self, alin_kerros, ylin_kerros, hissien_lkm):
-        self.hissit = [Hissi(alin_kerros, ylin_kerros) for _ in range(hissien_lkm)]
+        self.hissit = [hissi(alin_kerros, ylin_kerros) for _ in range(hissien_lkm)]
 
     def aja_hissiä(self, hissi_numero, kohde_kerros):
         if 0 <= hissi_numero < len(self.hissit):
