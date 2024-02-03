@@ -1,4 +1,4 @@
-lentoasemat = {}
+lentoasemat = {}   # sanakirja
 def lisaa_lentoasema():
     icao_koodi = input("Syötä lentoaseman ICAO-koodi: ")
     nimi = input("Syötä lentoaseman nimi: ")
