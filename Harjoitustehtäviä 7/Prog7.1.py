@@ -1,4 +1,4 @@
-vuodenajat = ('talvi', '<kevät>', 'kesä', 'syksy')
+vuodenajat = ('talvi', 'kevät', 'kesä', 'syksy')
 
 
 try:
