@@ -5,6 +5,12 @@ try:
     kk = int(input("Syötä kuukauden numero (1-12): "))
     if 1 <= kk <= 12:  # kk - kuukausi
         vuodenaika_index = (kk % 12) // 3
+        # jännökset 1,2,3,4,5,6,7,8,9,10,11,0
+        # // 3  jakaa jäljellä olevat numerot 0-11 neljään lohkoon
+        # 0: Talvi
+        # 1: Kevät
+        # 2: Kesä
+        # 3: Syksy
         vastaava_vuodenaika = vuodenajat[vuodenaika_index]
         print(f"Kuukausi {kk} vastaa vuodenaikaa {vastaava_vuodenaika}.")
     else:

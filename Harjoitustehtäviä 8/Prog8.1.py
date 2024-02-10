@@ -2,7 +2,7 @@ import mysql.connector
 def search_airport(ident):
     sql = 'SELECT name, municipality FROM airport WHERE ident = %s'
     kursori = yhteys.cursor()
-    kursori.execute(sql, (ident,))
+    kursori.execute(sql, (ident,))      # tuple
     tulos = kursori.fetchone()
     return tulos
 
