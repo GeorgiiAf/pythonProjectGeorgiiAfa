@@ -1,19 +1,19 @@
 import json
 import requests
 
-#  API KEY 468c0b3f70b49c1ba5d2c17702056ff3
+
 #   funktio
 # Espoo     lat': 60.2047672, 'lon': 24.6568435
 def säätiedot(lat,lon):
     exclude_parts = 'minutely,current,alerts'
-    säätiedot_linkki = f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={exclude_parts}&appid=ea160710d29362e47dabb6650ab0a046"
+    säätiedot_linkki = f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={exclude_parts}&appid="
     weather_response = requests.get(säätiedot_linkki)
     weather_data = weather_response.json()
     return weather_data
 
 #   pääohjelma
 name = input('Kirjoita paikkakunnan nimi    :')
-sijainnin_koordinaatit = f'http://api.openweathermap.org/geo/1.0/direct?q={name}&limit=1&appid=ea160710d29362e47dabb6650ab0a046'
+sijainnin_koordinaatit = f'http://api.openweathermap.org/geo/1.0/direct?q={name}&limit='
 #
 response = requests.get(sijainnin_koordinaatit)
 sijainnin_data = response.json()
@@ -34,4 +34,4 @@ try:
         print("Paikkakuntaa ei löytynyt. Tarkista oikeinkirjoitus ja yritä uudelleen.")
 except KeyError:
     print("Virhe: Sijaintitietoja ei löydy vastauksesta.")
-#  API KEY 468c0b3f70b49c1ba5d2c17702056ff3
+
