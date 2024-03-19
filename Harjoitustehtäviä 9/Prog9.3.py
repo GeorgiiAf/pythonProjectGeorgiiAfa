@@ -1,4 +1,4 @@
-class auto:
+class Auto:
     def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
@@ -15,7 +15,7 @@ class auto:
     def kulje(self,tuntimäärä):
         self.kuljettu_matka += self.tämänhetkinen_nopeus * tuntimäärä
 
-uusi_auto = auto(" ABC-123", 142)
+uusi_auto = Auto(" ABC-123", 142)
 uusi_auto.kiihdytä(30)
 print("Auton nopeus:", uusi_auto.tämänhetkinen_nopeus, "km/h")
 uusi_auto.kiihdytä(70)

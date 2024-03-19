@@ -1,5 +1,5 @@
 import random
-class auto:
+class Auto:
     def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
@@ -19,15 +19,17 @@ autot = []
 for i in range(1, 11):
     rekisteritunnus = f" ABC-{i}"
     huippunopeus = random.randint(100, 200)
-    uusi_auto = auto(rekisteritunnus, huippunopeus)
+    uusi_auto = Auto(rekisteritunnus, huippunopeus)
     autot.append(uusi_auto)
 
-for auto_obj in autot:  # auto_obj , koska luokan nimi on auto tehdään auto_obj konfliktin välttämiseksi
+for auto_obj in autot:  # auto_obj , koska luokan nimi on Auto tehdään auto_obj konfliktin välttämiseksi
     nopeuden_muutos = random.randint(-10, 15)
     auto_obj.kiihdytä(nopeuden_muutos)
     auto_obj.kulje(1)
     if auto_obj.kuljettu_matka >= 10000:
         break
+
+        # taulukko
 print("\nLopulliset tulokset:\n")
 print("{:<15} {:<15} {:<20} {:<20}".format("Rekisteri", "Nopeus (km/h)", "Kuljettu matka (km)", "Huippunopeus (km/h) "))
 print("-" * 70)
