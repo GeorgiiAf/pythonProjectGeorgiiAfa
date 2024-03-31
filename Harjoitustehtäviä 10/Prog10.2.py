@@ -25,7 +25,7 @@ class hissi:
 
 class Talo:
     def __init__(self, alin_kerros, ylin_kerros, hissien_lkm):
-        self.hissit = [hissi(alin_kerros, ylin_kerros) for _ in range(hissien_lkm)]
+        self.hissit = [hissi(alin_kerros, ylin_kerros) for _ in range(hissien_lkm)] # luo tarvittavan hissijen lkm
 
     def aja_hissiä(self, hissi_numero, kohde_kerros):
         if 0 <= hissi_numero < len(self.hissit):

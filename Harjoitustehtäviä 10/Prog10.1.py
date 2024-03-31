@@ -6,9 +6,9 @@ class hissi:
 
     def siirry_kerrokseen(self, kohde_kerros):
         while self.nykyinen_kerros != kohde_kerros:
-            if self.nykyinen_kerros < kohde_kerros:
+            if self.nykyinen_kerros < kohde_kerros:     # käskee ylöspain
                 self.kerros_ylös()
-            elif self.nykyinen_kerros > kohde_kerros:
+            elif self.nykyinen_kerros > kohde_kerros:    # käskee  alaspäin
                 self.kerros_alas()
 
     def kerros_ylös(self):
@@ -28,4 +28,4 @@ class hissi:
 
 h = hissi(1, 10)
 h.siirry_kerrokseen(5)
-h.siirry_kerrokseen(6)   # 1 , 2 ,3  ....
+h.siirry_kerrokseen(2)   # 1 , 2 ,3  ....
