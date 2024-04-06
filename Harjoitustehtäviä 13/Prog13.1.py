@@ -5,15 +5,19 @@ app = Flask(__name__)
 
 @app.route('/alkuluku')
 def primenumber():
+    # Get arguments from the request
+
     args = request.args
     Number = args.get("Number")
 
-    if Number is None:
+    if Number is None:     # Check if Number is defined
+
         return "Number not defined"
     try:
-        Number = int(Number)
+        Number = int(Number)       # number must be int
+
     except ValueError:
-        return "Error:  Number must be a number."
+        return "Error: Number must be an integer."
 
     if Number < 0:
         return "kielteinen luku ei voi olla alkulukuna."
